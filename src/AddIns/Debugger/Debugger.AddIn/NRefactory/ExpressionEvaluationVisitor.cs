@@ -247,8 +247,8 @@ namespace Debugger.AddIn
 		
 		Value VisitAssignment(ResolveResult lhs, ResolveResult rhs)
 		{
-			var lhsValue = Convert(lhs);
 			var rhsValue = Convert(rhs);
+			var lhsValue = Convert(lhs);
 			lhsValue.SetValue(evalThread, rhsValue);
 			return Convert(lhs);
 		}
